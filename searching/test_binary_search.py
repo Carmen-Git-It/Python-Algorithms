@@ -8,7 +8,7 @@ import unittest
 from binary_search import binary_search
 
 
-class LinearSearchTestCase(unittest.TestCase):
+class BinarySearchTestCase(unittest.TestCase):
 
     def test_empty_list(self):
         values = []

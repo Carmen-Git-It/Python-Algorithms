@@ -5,7 +5,7 @@
 #
 
 import unittest
-from linearseach import linear_search
+from linear_search import linear_search
 
 
 class LinearSearchTestCase(unittest.TestCase):
@@ -19,18 +19,18 @@ class LinearSearchTestCase(unittest.TestCase):
     def test_list_of_numbers(self):
         values = [5, 9, 8, 7, 2, 22, 15, 99, 1, -3, 0]
 
-        self.assertEqual(linear_search(values, 5), 5)
+        self.assertEqual(linear_search(values, 5), 0)
         self.assertEqual(linear_search(values, -5), None)
-        self.assertEqual(linear_search(values, 0), 0)
-        self.assertEqual(linear_search(values, 22), 22)
+        self.assertEqual(linear_search(values, 0), 10)
+        self.assertEqual(linear_search(values, 22), 5)
 
     def test_list_of_strings(self):
         values = ["hi", "hello", "goodbye", "almost"]
 
         self.assertEqual(linear_search(values, "nope"), None)
-        self.assertEqual(linear_search(values, "hi"), "hi")
-        self.assertEqual(linear_search(values, "goodbye"), "goodbye")
-        self.assertEqual(linear_search(values, "almost"), "almost")
+        self.assertEqual(linear_search(values, "hi"), 0)
+        self.assertEqual(linear_search(values, "goodbye"), 2)
+        self.assertEqual(linear_search(values, "almost"), 3)
 
 
 if __name__ == '__main__':

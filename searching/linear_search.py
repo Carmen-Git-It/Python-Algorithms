@@ -5,7 +5,7 @@
 #
 
 def linear_search(values, element):
-    for x in values:
-        if x == element:
+    for x in range(len(values)):
+        if values[x] == element:
             return x
     return None
